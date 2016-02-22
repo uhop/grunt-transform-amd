@@ -1,0 +1,43 @@
+{
+  "name": "grunt-transform-amd",
+  "description": "Transform AMD and UMD modules to CommonJS, globals, and so on.",
+  "version": "1.0.0",
+  "homepage": "https://github.com/uhop/grunt-transform-amd",
+  "author": {
+    "name": "Eugene Lazutkin",
+    "email": "eugene.lazutkin@gmail.com",
+    "url": "http://lazutkin.com/"
+  },
+  "github": "http://github.com/uhop/grunt-transform-amd",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/uhop/grunt-transform-amd.git"
+  },
+  "bugs": {
+    "url": "https://github.com/uhop/grunt-transform-amd/issues"
+  },
+  "license": "BSD-3-Clause",
+  "main": "Gruntfile.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "grunt test && node tests/tests.js"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "grunt": ">=0.4.0"
+  },
+  "peerDependencies": {
+    "grunt": ">=0.4.0"
+  },
+  "keywords": [
+    "gruntplugin",
+    "code transform",
+    "modules",
+    "amd",
+    "commonjs",
+    "globals"
+  ]
+}
