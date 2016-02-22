@@ -35,18 +35,15 @@ module.exports = function (grunt) {
 					grunt.fatal('grunt-transform-amd does not support "expand" option.', 3);
 					return;
 				}
-				globals.globals['!dist'] = file.dest;
 				var pf = processFile({}, globals, loaders, options.newLoader);
-				if (file.cwd) {
-					file.src.forEach(function (name) {
-						var ext = path.extname(name),
-							mod = './' + (ext ? name.slice(0, -ext.length) : name);
-						var from = options.replacements.hasOwnProperty(name) ? options.replacements[name] : name;
-						pf(path.join(file.cwd, from), mod, path.join(file.dest, name));
-					});
-				} else {
-					file.src.forEach(pf);
-				}
+				file.src.forEach(function (name) {
+					var ext = path.extname(name),
+						mod = './' + (ext ? name.slice(0, -ext.length) : name),
+						from = options.replacements.hasOwnProperty(name) ? options.replacements[name] : name;
+					if (from) {
+						pf(path.join(file.cwd || '', from), mod, path.join(file.dest, name));
+					}
+				});
 			});
 		}
 	);
