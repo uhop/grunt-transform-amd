@@ -25,6 +25,7 @@
     "test": "grunt test && node tests/tests.js"
   },
   "dependencies": {
+    "heya-globalize": "^1.0.1"
   },
   "devDependencies": {
     "grunt": ">=0.4.0"
