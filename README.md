@@ -86,6 +86,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 
+- 1.0.3 *Minor bugfixes.*
 - 1.0.2 *Added `silent` option.*
 - 1.0.1 *Now it works with dynamic expansion.*
 - 1.0.0 *The initial release.*

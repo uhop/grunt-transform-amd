@@ -1,7 +1,7 @@
 {
   "name": "grunt-transform-amd",
   "description": "Transform AMD and UMD modules to CommonJS, globals, and so on.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "homepage": "https://github.com/uhop/grunt-transform-amd",
   "author": {
     "name": "Eugene Lazutkin",

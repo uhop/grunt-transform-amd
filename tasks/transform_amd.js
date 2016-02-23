@@ -37,21 +37,18 @@ module.exports = function (grunt) {
 						mod = './' + (ext ? name.slice(0, -ext.length) : name),
 						from = options.replacements.hasOwnProperty(name) ? options.replacements[name] : name,
 						to = file.orig && file.orig.expand ? file.dest : path.join(file.dest, name);
-					from = path.join(file.cwd || '', from);
+					if (!from) {
+						console.log(name, 'is skipped');
+						return;
+					}
 					if (!options.silent) {
-						if (from) {
-							if (name === from) {
-								console.log(name, '=>', to);
-							} else {
-								console.log(name, '=>', from, '=>', to);
-							}
+						if (name === from) {
+							console.log(name, '=>', to);
 						} else {
-							console.log(name, 'is skipped');
+							console.log(name, '=>', from, '=>', to);
 						}
 					}
-					if (from) {
-						pf(from, mod, to);
-					}
+					pf(path.join(file.cwd || '', from), mod, to);
 				});
 			});
 		}
