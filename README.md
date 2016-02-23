@@ -74,6 +74,7 @@ Following `options` are recognized:
 * `loaders` &mdash; an array of strings. Those strings will be searched verbatim at the beginning of each file. If found they will be replaced by a different loader.
   If not specified, a Heya-style UMD loader will be looked for. In any case `define` will be tried as well, which will be replaced by a new loader too.
 * `newLoader` &mdash; a string, which defines a new loader. If not specified, a global-based loader will be dynamically generated.
+* `silent` &mdash; a Boolean. If `true` all informational output is suppressed. Default: `false`.
 
 Please take a look at `Gruntfile.js` of this project as well as a content of `tests/` directory to understand the conversion process better. Run `npm test`, and inspect
 generated files in `tests/out/`. Files `a.js`, `b.js`, and `c.js` contain the Heya-style UMD loader string (allows a module to work seamlessly in AMD and CommonJS environments).
@@ -85,6 +86,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 
+- 1.0.2 *Added `silent` option.*
 - 1.0.1 *Now it works with dynamic expansion.*
 - 1.0.0 *The initial release.*
 

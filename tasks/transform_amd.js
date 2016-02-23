@@ -29,15 +29,28 @@ module.exports = function (grunt) {
 
 			var globals = new Globals(options.browserGlobals, options.root),
 				loaders = options.loaders || defaultLoaders,
-				pf = processFile({}, globals, loaders, options.newLoader);
+				pf = processFile(globals, loaders, options.newLoader);
 
 			this.files.forEach(function (file) {
 				file.src.forEach(function (name) {
 					var ext = path.extname(name),
 						mod = './' + (ext ? name.slice(0, -ext.length) : name),
-						from = options.replacements.hasOwnProperty(name) ? options.replacements[name] : name;
+						from = options.replacements.hasOwnProperty(name) ? options.replacements[name] : name,
+						to = file.orig && file.orig.expand ? file.dest : path.join(file.dest, name);
+					from = path.join(file.cwd || '', from);
+					if (!options.silent) {
+						if (from) {
+							if (name === from) {
+								console.log(name, '=>', to);
+							} else {
+								console.log(name, '=>', from, '=>', to);
+							}
+						} else {
+							console.log(name, 'is skipped');
+						}
+					}
 					if (from) {
-						pf(path.join(file.cwd || '', from), mod, file.orig.expand ? file.dest : path.join(file.dest, name));
+						pf(from, mod, to);
 					}
 				});
 			});
