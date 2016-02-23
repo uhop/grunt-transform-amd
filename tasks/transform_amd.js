@@ -28,20 +28,16 @@ module.exports = function (grunt) {
 			}
 
 			var globals = new Globals(options.browserGlobals, options.root),
-				loaders = options.loaders || defaultLoaders;
+				loaders = options.loaders || defaultLoaders,
+				pf = processFile({}, globals, loaders, options.newLoader);
 
 			this.files.forEach(function (file) {
-				if (file.expand) {
-					grunt.fatal('grunt-transform-amd does not support "expand" option.', 3);
-					return;
-				}
-				var pf = processFile({}, globals, loaders, options.newLoader);
 				file.src.forEach(function (name) {
 					var ext = path.extname(name),
 						mod = './' + (ext ? name.slice(0, -ext.length) : name),
 						from = options.replacements.hasOwnProperty(name) ? options.replacements[name] : name;
 					if (from) {
-						pf(path.join(file.cwd || '', from), mod, path.join(file.dest, name));
+						pf(path.join(file.cwd || '', from), mod, file.orig.expand ? file.dest : path.join(file.dest, name));
 					}
 				});
 			});
