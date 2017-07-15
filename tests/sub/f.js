@@ -1,4 +1,4 @@
-define(["./b", "./c"], function(b, c){
+define(["../b", "../c"], function(b, c){
 	"use strict";
 	window.uhop = window.uhop || {};
 	window.uhop.F = function () {

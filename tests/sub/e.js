@@ -1,4 +1,4 @@
-define(['./d'], function(d){
+define(['../d'], function(d){
 	"use strict";
 	return function () {
 		if (d() !== 'd') return false;
