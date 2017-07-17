@@ -111,6 +111,6 @@ BSD
 [deps-image]:     https://img.shields.io/david/uhop/grunt-transform-amd.svg
 [deps-url]:       https://david-dm.org/uhop/grunt-transform-amd
 [dev-deps-image]: https://img.shields.io/david/dev/uhop/grunt-transform-amd.svg
-[dev-deps-url]:   https://david-dm.org/uhop/grunt-transform-amd#info=devDependencies
+[dev-deps-url]:   https://david-dm.org/uhop/grunt-transform-amd?type=dev
 [travis-image]:   https://img.shields.io/travis/uhop/grunt-transform-amd.svg
 [travis-url]:     https://travis-ci.org/uhop/grunt-transform-amd
