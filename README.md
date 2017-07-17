@@ -2,6 +2,7 @@
 
 [![Build status][travis-image]][travis-url]
 [![Dependencies][deps-image]][deps-url]
+[![devDependencies][dev-deps-image]][dev-deps-url]
 [![NPM version][npm-image]][npm-url]
 
 
@@ -94,11 +95,12 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 
-- 1.1.0 *Support for generating AMD/CommonJS/ES6 modules.*
-- 1.0.3 *Minor bugfixes.*
-- 1.0.2 *Added `silent` option.*
-- 1.0.1 *Now it works with dynamic expansion.*
-- 1.0.0 *The initial release.*
+- 1.1.1 &mdash; *Refreshed dependencies to incorporate bugfixes upstream.*
+- 1.1.0 &mdash; *Support for generating AMD/CommonJS/ES6 modules.*
+- 1.0.3 &mdash; *Minor bugfixes.*
+- 1.0.2 &mdash; *Added `silent` option.*
+- 1.0.1 &mdash; *Now it works with dynamic expansion.*
+- 1.0.0 &mdash; *The initial release.*
 
 ## License
 

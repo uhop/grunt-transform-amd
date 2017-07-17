@@ -1,7 +1,7 @@
 {
   "name": "grunt-transform-amd",
   "description": "Transform AMD and UMD modules to CommonJS, globals, and so on.",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "homepage": "https://github.com/uhop/grunt-transform-amd",
   "author": {
     "name": "Eugene Lazutkin",
@@ -25,7 +25,7 @@
     "test": "grunt test && node tests/tests.js"
   },
   "dependencies": {
-    "heya-globalize": "^1.1.0"
+    "heya-globalize": "^1.2.1"
   },
   "devDependencies": {
     "grunt": ">=0.4.0"
