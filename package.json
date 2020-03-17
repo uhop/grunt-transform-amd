@@ -28,7 +28,7 @@
     "heya-globalize": "^1.2.1"
   },
   "devDependencies": {
-    "grunt": ">=0.4.0"
+    "grunt": ">=1.1.0"
   },
   "peerDependencies": {
     "grunt": ">=0.4.0"
